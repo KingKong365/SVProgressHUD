@@ -529,13 +529,16 @@ static const CGFloat SVProgressHUDLabelSpacing = 8.0f;
 
 #if TARGET_OS_IOS
 - (void)updateMotionEffectForOrientation:(UIInterfaceOrientation)orientation {
+    /*
     UIInterpolatingMotionEffectType xMotionEffectType = UIInterfaceOrientationIsPortrait(orientation) ? UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis : UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis;
     UIInterpolatingMotionEffectType yMotionEffectType = UIInterfaceOrientationIsPortrait(orientation) ? UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis : UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis;
     [self updateMotionEffectForXMotionEffectType:xMotionEffectType yMotionEffectType:yMotionEffectType];
+    */
 }
 #endif
 
 - (void)updateMotionEffectForXMotionEffectType:(UIInterpolatingMotionEffectType)xMotionEffectType yMotionEffectType:(UIInterpolatingMotionEffectType)yMotionEffectType {
+    /*
     UIInterpolatingMotionEffect *effectX = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x" type:xMotionEffectType];
     effectX.minimumRelativeValue = @(-SVProgressHUDParallaxDepthPoints);
     effectX.maximumRelativeValue = @(SVProgressHUDParallaxDepthPoints);
@@ -550,6 +553,7 @@ static const CGFloat SVProgressHUDLabelSpacing = 8.0f;
     // Clear old motion effect, then add new motion effects
     self.hudView.motionEffects = @[];
     [self.hudView addMotionEffect:effectGroup];
+    */
 }
 
 - (void)updateViewHierarchy {
